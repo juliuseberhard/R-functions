@@ -36,7 +36,8 @@ ptf.wosten.theta.s <- function(clay,  # clay content in %
                                topSoil  # vector of [0=subsoil, 1=topsoil]
                                ) {
   
-  # topsoil can be defined as soil at a depth of less than 30 cm
+  # topsoil is usually defined as soil at a depth of less than 30 cm
+  # (Dai et al., 2013)
   
   if (any(silt == 0)) {
     stop("Some 'silt' values are 0. The PTF does not handle 0% silt content (ln(silt)).")
